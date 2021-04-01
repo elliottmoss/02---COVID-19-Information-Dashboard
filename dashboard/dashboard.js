@@ -72,4 +72,23 @@ function drawChart(covidData, buttonSelected){
       }
     }
   })
+  
+    function(){updateLineColour(buttonSelected);};
+  
+}
+
+
+
+
+function updateLineColour(colourSelection){
+	if(colourSelection == 1){
+	myChart.datasets.borderColor = 'red',	
+	}
+	else if(colourSelection == 2){
+	myChart.datasets.borderColor = 'green',	
+	}
+	else if(colourSelection == 3){
+	myChart.datasets.borderColor = 'blue',	
+	}
+	myChart.update(),
 }
