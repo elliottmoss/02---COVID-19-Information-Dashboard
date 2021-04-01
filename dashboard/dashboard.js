@@ -1,7 +1,5 @@
 // /* globals Chart:false, feather:false */
 
-var myChart;
-
 (async function () {
   'use strict'
   feather.replace()
@@ -44,13 +42,10 @@ function getChartData(covidData, buttonSelected){
 }
 
 function drawChart(covidData, buttonSelected){
+  // Graphs
   var ctx = document.getElementById('myChart')
-
-  if(window.myChart != undefined){
-    window.myChart.destroy();
-  }
   // eslint-disable-next-line no-unused-vars
-  window.myChart = new Chart(ctx, {
+  var myChart = new Chart(ctx, {
     type: 'line',
     data: {
       labels: getChartLabels(covidData),
